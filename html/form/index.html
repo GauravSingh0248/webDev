@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+
+    <script>
+        function validateForm() {
+            // Get values from input fields
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+
+            // Email validation
+            if (email === "") {
+                alert("Please enter your email");
+                return false;
+            }
+
+            // Password validation
+            if (password === "") {
+                alert("Please enter your password");
+                return false;
+            }
+
+            // If everything is valid
+            alert("Login successful!");
+            return true;
+        }
+    </script>
+</head>
+
+<body>
+
+    <h2>Login</h2>
+
+    <form onsubmit="return validateForm()">
+        Email : <input type="email" id="email" placeholder="Enter your email">
+        <br><br>
+        Password :
+        <input type="password" id="password" placeholder="Enter your password">
+        <br><br>
+
+        <button type="submit">Login</button>
+        <button type="reset">Reset</button>
+    </form>
+
+    <div>
+        <progress id="file" max="100" value="70">70%</progress>
+    </div>
+
+</body>
+</html>
